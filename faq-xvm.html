@@ -1,0 +1,410 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>NDO ModPack's</title>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Сборка модов от NDO"/>
+    <meta name="keywords" content="World Of Tanks, world of tanks, wot, night_dragon_on, night dragon on, xvm, моды, сборка модов, оленемер, оленеметр, wn8, astarom, mod pack, modpack"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/zoom-image.css"/>
+    <!--Plugins--->
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/slider.jquery.js"></script>
+    <script type="text/javascript" src="./js/zoom-image.js"></script>
+    <script type="text/javascript">
+      $(function() {
+          $('#slider-inner').slider('#previous', '#next');
+      });
+    </script>
+  </head>
+
+  <body>
+    <div id="main">
+      <header>
+        <nav>
+          <div class="menu">
+            <ul class="clear">
+              <li>
+                <a href="./index.html" title="Главная">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="./faq.html" title="F.A.Q">
+                  <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="./autors.html" title="Авторство">
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="./support.html" title="Поддержка">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://kr.cm/f/t/39394/" target="_blank" title="Форум">
+                  <i class="fa fa-comments-o" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div id="slider-box">
+        <div class="slider-gallery">
+            <a href="#" id="previous"><img src="./images/btn_l.png" alt=""></a>
+            <div id="slider-inner">
+              <ul>
+                <li><img src="./images/preview/1.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/2.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/3.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/4.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/5.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/6.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/7.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/8.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/9.png" class="minimized" alt=""></li>
+                <li><img src="./images/preview/10.png" class="minimized" alt=""></li>
+              </ul>
+          </div>
+          <a href="#" id="next"><img src="./images/btn_r.png" alt=""></a>
+        </div>
+      </div>
+      <div id="content">
+        <div id="content-main">
+          <p>&nbsp;</p>
+          <p style="text-align:center"><img src="./images/FAQ.png" width="125" height="97" alt=""></p>
+          <p>&nbsp;</p>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как активировать отображение статистики в моде XVM?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Пройти процедуру активации сетевых сервисов на сайте комплексной модификации XVM по <a href="http://www.modxvm.com/faq/%d0%ba%d0%b0%d0%ba-%d0%b2%d0%ba%d0%bb%d1%8e%d1%87%d0%b8%d1%82%d1%8c-%d1%81%d1%82%d0%b0%d1%82%d0%b8%d1%81%d1%82%d0%b8%d0%ba%d1%83-%d0%b2-xvm/" style="color:#FCBF0F;text-decoration:none;"/>следующей инструкции</a>.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить отображаемый рейтинг эффективности?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Рейтинг эффективности выбирается в личном кабинете на официальном сайте мода <a href="https://modxvm.com/" style="color:#FCBF0F;text-decoration:none;"/>www.modxvm.com</a>.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как включить/отключить вывод дополнительных элементов в конфиге?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <table>
+              <tr><td>Боевой интерфейс:</td></tr>
+              <tr><td>&nbsp;</td></tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">hit_log</span></td>
+                <td>- панель лога нанесенного урона</td>
+              </tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">total_efficiency</span></td>
+                <td>- панель общей эффективности игрока в бою</td>
+              </tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">damage_log</span></td>
+                <td>- дамаг панель</td>
+              </tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">repair_timer</span></td>
+                <td>- таймер ремонта модулей</td>
+              </tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">info_panel</span></td>
+                <td>- инфо панель</td>
+              </tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">total_hp_panel</span></td>
+                <td>- панель общего запаса прочности техники (ХП команд)</td>
+              </tr>
+              <tr>
+                <td>* "battleLabels" / <span style="color:#FCBF0F;">color_blind</span></td>
+                <td>- вкл/выкл режима цветовая слепота</td>
+              </tr>
+              <tr><td>&nbsp;</td></tr>
+              <tr><td>Маркеры техники:</td></tr>
+              <tr><td>&nbsp;</td></tr>
+              <tr>
+                <td>* "markers" / <span style="color:#FCBF0F;">squad_number</span></td>
+                <td>- номер взвода в маркерах</td>
+              </tr>
+              <tr>
+                <td>* "markers" / <span style="color:#FCBF0F;">lowHp_marker</span></td>
+                <td>- маркер приоритета цели (с менее 25% прочности)</td>
+              </tr>
+              <tr><td>&nbsp;</td></tr>
+              <tr><td>Панели команд:</td></tr>
+              <tr><td>&nbsp;</td></tr>
+              <tr>
+                <td>* "playersPanel" / <span style="color:#FCBF0F;">xmqp_marker</span></td>
+                <td>- маркер сервиса XMQP</td>
+              </tr>
+              <tr>
+                <td>* "playersPanel" / <span style="color:#FCBF0F;">spotted_marker</span></td>
+                <td>- маркер засвеченных противников</td>
+              </tr>
+              <tr>
+                <td>* "playersPanel" / <span style="color:#FCBF0F;">hp_panels</span></td>
+                <td>- запас прочности техники (ХП техники), отдельно для каждого режима панелей команд</td>
+              </tr>
+            </table>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:395px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">@settings.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Прописать значение <span style="color:#FCBF0F;">true</span> для включения элемента, <span style="color:#FCBF0F;">false</span> - для отключения.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как поменять иконку перка "Шестое чувство"?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Для замены иконки достаточно заменить соответствующую картинку по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:445px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / img / <span style="color:#FCBF0F;">SixthSense.png</span></pre>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить время отображения иконки перка "Шестое чувство"?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:370px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">battle.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:190px; height:50px;">"battle": {<br>&emsp;"sixthSenseDuration": <span style="color:#FCBF0F;">2000</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">2000</span> (2 сек), <span style="color:#FCBF0F;">10000</span> (10 сек) и т.д.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить положение Debug-панели (панель фпс, пинг)?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:392px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">elements.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:105px; height:50px;">"debugPanel": {<br>&emsp;"y": <span style="color:#FCBF0F;">0</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">0</span> задавая необходимые координаты по оси Y.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить положение таймера времени боя?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:392px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">elements.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:105px; height:50px;">"battleTimer": {<br>&emsp;"y": <span style="color:#FCBF0F;">10</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">10</span> задавая необходимые координаты по оси Y.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить положение лога нанесенного урона?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:375px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">hitLog.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:390px; height:65px;">"hitLog": {<br>&emsp;"x": <span style="color:#FCBF0F;">5</span>,<br>&emsp;"y": "{{battletype-key=epic_battle?{{squad?210|135}}|<span style="color:#FCBF0F;">450</span>}}",<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">5</span> задавая необходимые координаты по оси X.</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">450</span> задавая необходимые координаты по оси Y.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить положение панелей команд (ушей)?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:392px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">elements.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:110px; height:50px;">"playersPanel": {<br>&emsp;"y": <span style="color:#FCBF0F;">-15</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">-15</span> задавая необходимые координаты по оси Y.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как поменять клавишу увеличения миникарты с "Caps Lock" на другую?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:385px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">hotkeys.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:305px; height:50px;">"minimapZoom": {<br>&emsp;"enabled": true, "keyCode": <span style="color:#FCBF0F;">58</span>, "onHold": true }<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Вместо значения <span style="color:#FCBF0F;">58</span> выбираем код нужной вам клавиши (код см. <a href="https://gitlab.com/xvm/xvm/-/raw/master/release/doc/keycodes.txt" style="color:#FCBF0F;text-decoration:none;"/>в данной таблице</a>).</p>
+            <p>Параметр <span style="color:#FCBF0F;">"onHold"</span> отвечает за "залипание" клавиши: меняем <span style="color:#FCBF0F;">true</span> на <span style="color:#FCBF0F;">false</span> для отключения данной функции.</p>
+            <p>Параметр <span style="color:#FCBF0F;">"enabled"</span> отвечает за возможность увеличения миникарты: меняем <span style="color:#FCBF0F;">true</span> на <span style="color:#FCBF0F;">false</span> для отключения данной функции.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как включить зеркалирование иконок?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:370px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">battle.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:200px; height:50px;">"battle": {<br>&emsp;"mirroredVehicleIcons": <span style="color:#FCBF0F;">false</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение с <span style="color:#FCBF0F;">false</span> на <span style="color:#FCBF0F;">true</span>.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить положение пинга серверов в ангаре, в окне логина?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:365px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">login.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:115px; height:80px;">"login": {<br>&emsp;"enabled": true,<br>&emsp;"x": <span style="color:#FCBF0F;">15</span>,<br>&emsp;"y": <span style="color:#FCBF0F;">35</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">15</span> задавая необходимые координаты по оси X.</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">35</span> задавая необходимые координаты по оси Y.</p>
+            <p>&nbsp;</p>
+            <pre style="width:380px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">hangar.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:115px; height:80px;">"hangar": {<br>&emsp;"enabled": true,<br>&emsp;"x": <span style="color:#FCBF0F;">3</span>,<br>&emsp;"y": <span style="color:#FCBF0F;">53</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">3</span> задавая необходимые координаты по оси X.</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">53</span> задавая необходимые координаты по оси Y.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить количество рядов в карусели техники в ангаре?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:390px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">carousel.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:85px; height:50px;">"carousel": {<br>&emsp;"rows": <span style="color:#FCBF0F;">0</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">0</span> задавая необходимое вам количество рядов.</p>
+            <p>При нулевом значении количество рядов будет регулироваться в настройках клиента.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как изменить положение часов в ангаре?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:367px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">clock.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:120px; height:80px;">"clock": {<br>&emsp;"x": <span style="color:#FCBF0F;">-300</span>,<br>&emsp;"y": <span style="color:#FCBF0F;">0</span>,<br>&emsp;"align": "<span style="color:#FCBF0F;">center</span>",<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">-300</span> задавая необходимые координаты по оси X.</p>
+            <p>Меняем значение <span style="color:#FCBF0F;">0</span> задавая необходимые координаты по оси Y.</p>
+            <p>Параметр <span style="color:#FCBF0F;">center</span> задавая выравнивание часов в окне клиента, может иметь следующие значения:</p>
+            <p>&nbsp;</p>
+            <p>&emsp;&emsp;<span style="color:#FCBF0F;">right</span> - выравнивание элементов по правому краю экрана;</p>
+            <p>&emsp;&emsp;<span style="color:#FCBF0F;">left</span> - выравнивание элементов по левому краю экрана;</p>
+            <p>&emsp;&emsp;<span style="color:#FCBF0F;">center</span> - выравнивание элементов по центру экрана.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как вернуть отображение отсчета времени до начала боя?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:392px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">elements.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:123px; height:65px;">"prebattleTimer": {<br>&emsp;"visible": <span style="color:#FCBF0F;">false</span>,<br>&emsp;"alpha": <span style="color:#FCBF0F;">0</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Меняем значение с <span style="color:#FCBF0F;">false</span> на <span style="color:#FCBF0F;">true</span>, далее <span style="color:#FCBF0F;">0</span> на <span style="color:#FCBF0F;">1</span>.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Как убрать нули (в панелях команд) у игроков у которых нет фрагов?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:480px; height:35px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">statisticForm.xc</span><br>{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">playersPanelTemplates.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>С помощью команды "Поиск > Замена" заменяем:</p>
+            <p>&nbsp;</p>
+            <pre style="width:75px; height:20px;">{{frags|0}}</pre>
+            <p>&nbsp;</p>
+            <p>На:</p>
+            <p>&nbsp;</p>
+            <pre style="width:60px; height:20px;">{{frags}}</pre>
+            <p>&nbsp;</p>
+            <p>Сохраняем внесенные изменения.</p>
+          </div>
+          <div id="content-faq">
+            <p class="colum-left" style="color:#50FF50;">Выбрал при установке мод "Инфо панель", но в бою он не работает, почему?</p>
+            <p class="colum-right" style="text-align:right"><img src="./images/pen.svg" alt=""></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>Модификация включается по горячей клавише (по умолчанию это кнопка «Alt»). Возможны 2 состояния:</p>
+            <p>&nbsp;</p>
+            <p>&emsp;&emsp;1) Прицел наведен на контур союзника/противника - отображаются характеристики техники в прицеле;</p>
+            <p>&emsp;&emsp;2) Прицел не наведен - отображаются характеристики вашей техники.</p>
+            <p>&nbsp;</p>
+            <p>Задаем свою горячую клавишу, открыть файл по пути:</p>
+            <p>&nbsp;</p>
+            <pre style="width:475px; height:20px;">{{клиент игры}} / res_mods / configs / xvm / NDO / <span style="color:#FCBF0F;">battleLabelsTemplates.xc</span></pre>
+            <p>&nbsp;</p>
+            <p>Отредактировать выделенные фрагменты кода:</p>
+            <p>&nbsp;</p>
+            <pre style="width:132px; height:135px;">"info_panel_bg": {<br>&emsp;"hotKeyCode": <span style="color:#FCBF0F;">56</span>,<br>&emsp;"onHold": <span style="color:#FCBF0F;">true</span>,<br>},<br><br>"info_panel": {<br>&emsp;"hotKeyCode": <span style="color:#FCBF0F;">56</span>,<br>&emsp;"onHold": <span style="color:#FCBF0F;">true</span>,<br>},</pre>
+            <p>&nbsp;</p>
+            <p>Вместо значения <span style="color:#FCBF0F;">56</span> выбираем код нужной вам клавиши (код см. <a href="https://gitlab.com/xvm/xvm/-/raw/master/release/doc/keycodes.txt" style="color:#FCBF0F;text-decoration:none;"/>в данной таблице</a>).</p>
+            <p>Параметр <span style="color:#FCBF0F;">"onHold"</span> отвечает за "залипание" клавиши: меняем <span style="color:#FCBF0F;">true</span> на <span style="color:#FCBF0F;">false</span> для отключения данной функции.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <p>Copyright &copy; "night_dragon_on", 2014-2020</p>
+  </footer>
+</html>
