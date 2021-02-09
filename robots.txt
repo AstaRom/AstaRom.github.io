@@ -1,0 +1,8 @@
+User-Agent: *
+
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /images/
+Disallow: /js/
+
+Sitemap: https://astarom.github.io/sitemap.xml

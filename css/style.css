@@ -1,7 +1,7 @@
 @font-face {
-  font-family: Open Sans;
-    src: url('../fonts/OpenSans-Regular.eot');
-    src: local("Open Sans"), url('../fonts/OpenSans-Regular.ttf');
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+  url('../fonts/OpenSans-Regular.woff') format('woff');
 }
 
 html {
@@ -27,6 +27,7 @@ body {
   background-image: url(../images/background.jpg);
   background-size: cover;
   background-attachment: fixed;
+  min-width: 1024px;
 }
 
 h1 {
