@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambilight — DIY-проект</title>
+    <meta name="description" content="DIY-проект Ambilight">
+    <!--Pages-->
+    <link rel="canonical" href="https://astarom.github.io">
+    <link rel="alternate" hreflang="ru" href="https://astarom.github.io">
+    <link rel="alternate" hreflang="en" href="https://astarom.github.io/index_en.html">
+    <link rel="alternate" hreflang="x-default" href="https://astarom.github.io">
+    <!--Keywords-->
+    <meta name="keywords" content="Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
+                                   Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
+    <!--Not mobile version-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--Import-->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./files/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/./files/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="./files/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./files/css/fonts.css">
+    <!--Verification-->
+    <meta name="google-site-verification" content="7ZlIHSUsH0VN6ifJyjRWQEcNXSIZWQw1Fgw4n2FCzxI">
+    <meta name="yandex-verification" content="6291f98fd0f4712c">
+    <meta name="msvalidate.01" content="1D9C4139695EC96F7389497764F61809">
+  </head>
+  <body>
+    <p style="text-align:center">
+      <img src="./files/img/logo.png" width="500" height="170" alt="logo">
+    </p>
+
+    <p style="color:#83FF83;text-align:center">
+      Данное руководство описывает мой опыт сборки аналога подсветки Ambilight которая используется на телевизорах Phillips.
+      Устройство состоит из светодиодной ленты которая закреплена по всему периметру телевизора с тыльной его стороны.
+      Лента подключается к одноплатному компьютеру Raspberry Pi через микроконтроллер Esp32 с драйвером HyperSPI.
+      При помощи программы HyperHDR анализируется видео и аудио поток входного сигнала полученный с Usb-карты захвата.
+      После анализа параметры цвета передаются на светодиодную ленту которая воспроизводит рассеянный свет по периметру ТВ благодаря
+      чему поверхность стены за его корпусом динамически освещается, тем самым дополняя ореолом изображение на экране и как
+      бы визуально увеличивая его размер.
+    </p>
+
+    <p style="text-align:center">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/hKMV94HS9ZA?controls=0"
+      title="YouTube video player" allow="accelerometer; autoplay; clipboard-write;
+      encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </p>
+
+    <h2 style="text-align:center">Процесс сборки и настройки разбит на следующие этапы:</h2>
+    <ul>
+      <li>Покупка комплектующих:</li>
+      <ul>
+        <li><a href="./ru/buying_1.html">Устройство для хостинга HyperHDR</a></li>
+        <li><a href="./ru/buying_2.html">Светодиодный драйвер</a></li>
+        <li><a href="./ru/buying_3.html">HDMI сплиттер</a></li>
+        <li><a href="./ru/buying_4.html">Usb карта захвата</a></li>
+      </ul>
+      <li><a href="./ru/stage_1.html">Подготовка платы светодиодного драйвера</a></li>
+      <li><a href="./ru/stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
+      <li><a href="./ru/stage_3.html">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="./ru/stage_4.html">Установка светодиодной ленты на ТВ</a></li>
+      <li><a href="./ru/stage_5.html">Общая сборка компонентов</a></li>
+    </ul>
+
+    <p style="text-align:center">
+      <img src="./files/img/pages/author.png" width="154" height="138" alt="author">
+    </p>
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>Сборка компонентов / настройка ПО</td>
+          <td><a href="https://github.com/AstaRom">AstaRom</a></td>
+        </tr>
+        <tr>
+          <td>HyperHDR</td>
+          <td><a href="https://github.com/awawa-dev/HyperHDR">Awawa-Dev</a></td>
+        </tr>
+        <tr>
+          <td>HyperSPI</td>
+          <td><a href="https://github.com/awawa-dev/HyperSPI">Awawa-Dev</a></td>
+        </tr>
+        <tr>
+          <td>Fritzing</td>
+          <td><a href="https://github.com/fritzing/fritzing-app/releases/tag/CD-548">Fritzing Team</a></td>
+        </tr>
+        <tr>
+          <td>ESPHome-Flasher</td>
+          <td><a href="https://github.com/esphome/esphome-flasher">ESPHome Team</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <footer>
+      <p style="text-align:center">
+        <a href="#"><img src="./files/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="./index_en.html"><img src="./files/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+      </p>
+    </footer>
+  </body>
+</html>

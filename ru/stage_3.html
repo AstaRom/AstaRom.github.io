@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambilight · Прошивка платы светодиодного драйвера</title>
+    <meta name="description" content="DIY-проект — сборка и настройка, этап #3">
+    <!--Pages-->
+    <link rel="alternate" hreflang="ru" href="https://astarom.github.io/ru/stage_3.html">
+    <link rel="alternate" hreflang="en" href="https://astarom.github.io/en/stage_3.html">
+    <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/stage_3.html">
+    <!--Keywords-->
+    <meta name="keywords" content="ESP32, Esp8266, Raspberry Pi Pico RP2040, WS2812B,\
+                                   ws2812b, ESP32 MH-ET Live, CH9102X, ESPHome-Flasher, ESPHome Flasher, ESPHome,\
+                                   Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
+                                   Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
+    <!--Not mobile version-->
+    <meta name="HandheldFriendly" content="false">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--Import-->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <!--Plugins-->
+    <script src="../files/js/jquery.min.js"></script>
+    <script src="../files/js/zoom-image.js"></script>
+  </head>
+  <body>
+    <p style="text-align:center">
+      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+    </p>
+
+    <h1>Прошивка платы светодиодного драйвера</h1>
+    <p>
+      Открываем репозиторий разработчика HyperSPI, нам нужна страница релизных версий
+      <a href="https://github.com/awawa-dev/HyperSPI/releases" style="color:#6BB5FF;" title="HyperSPI">(ссылка)</a>.
+      <br>Скачиваем актуальный драйвер в зависимости от испоьзуемой платы (ESP32 / Esp8266) и типа светодиодной ленты.
+      Обратите внимание для платы <b>Raspberry Pi Pico RP2040</b> будет немного другой процесс установки драйвера без
+      неоходимости загрузки дополнительных программ, процесс описан на данной странице
+      <a href="https://github.com/awawa-dev/HyperSerialPico" style="color:#6BB5FF;" title="HyperSerialPico">(ссылка)</a>.
+    </p>
+
+    <p>
+      В моем случае я использую плату Esp32 и ленту WS2812B, соответственно мне необходимо использовать  драйвер:
+    </p>
+
+    <p class="code" style="width:230px; height:18px;">
+      hyperspi_esp32_WS281x_RGB.bin
+    </p>
+
+    <p>
+      Скачиваем самую последнюю доступную версию приложения "ESPHome-Flasher"
+      <a href="https://github.com/esphome/esphome-flasher/releases"
+      style="color:#6BB5FF;" title="ESPHome-Flasher">(ссылка)</a>, запускаем ее.
+      <br>Подключаем плату Esp32 к компьютеру с помощью MicroUsb кабеля.
+    </p>
+
+    <p>
+      В окне программы достаточно выполнить три действия:
+      <br>&emsp;- выбрать порт к которому подключена наша плата,
+      <br>&emsp;- указать путь до загруженного драйвера (файл *.bin),
+      <br>&emsp;- нажать кнопку "Flash ESP".
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/esphome_1.jpg" class="minimized" alt="esphome_1">
+    </p>
+
+    <p>
+      При успешном завершении процесса прошивки вы увидите следующее сообщение:
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/esphome_2.jpg" class="minimized" alt="esphome_2">
+    </p>
+
+    <p>
+      На этом данный этап прошивки платы светодиодного драйвера закончен.
+    </p>
+
+    <h1>Оглавление</h1>
+    <ul>
+      <li>Покупка комплектующих:</li>
+      <ol>
+        <li><a href="./buying_1.html">Устройство для хостинга HyperHDR</a></li>
+        <li><a href="./buying_2.html">Светодиодный драйвер</a></li>
+        <li><a href="./buying_3.html">HDMI сплиттер</a></li>
+        <li><a href="./buying_4.html">Usb карта захвата</a></li>
+      </ol>
+      <li><a href="./stage_1.html">Подготовка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
+      <li><a href="#" style="color:#6BB5FF">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_4.html">Установка светодиодной ленты на ТВ</a></li>
+      <li><a href="./stage_5.html">Общая сборка компонентов</a></li>
+    </ul>
+
+    <footer>
+      <p style="text-align:center">
+        <a href="#"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="../en/stage_3.html"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+      </p>
+    </footer>
+  </body>
+</html>
