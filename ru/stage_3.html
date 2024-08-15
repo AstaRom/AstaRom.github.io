@@ -38,44 +38,31 @@
     <p>
       Открываем репозиторий разработчика HyperSPI, нам нужна страница релизных версий
       <a href="https://github.com/awawa-dev/HyperSPI/releases" style="color:#6BB5FF;" title="HyperSPI">(ссылка)</a>.
-      <br>Скачиваем актуальный драйвер в зависимости от испоьзуемой платы (ESP32 / Esp8266) и типа светодиодной ленты.
-      Обратите внимание для платы <b>Raspberry Pi Pico RP2040</b> будет немного другой процесс установки драйвера без
-      неоходимости загрузки дополнительных программ, процесс описан на данной странице
-      <a href="https://github.com/awawa-dev/HyperSerialPico" style="color:#6BB5FF;" title="HyperSerialPico">(ссылка)</a>.
+      <br>Скачиваем актуальный драйвер в зависимости от испоьзуемой платы (Rp2040 / ESP32 / Esp8266) и типа светодиодной ленты.
     </p>
 
     <p>
-      В моем случае я использую плату Esp32 и ленту WS2812B, соответственно мне необходимо использовать  драйвер:
+      В моем случае я использую плату Rp2040 и ленту WS2812B, соответственно мне необходимо использовать  драйвер:
     </p>
 
-    <p class="code" style="width:230px; height:18px;">
-      hyperspi_esp32_WS281x_RGB.bin
-    </p>
-
-    <p>
-      Скачиваем самую последнюю доступную версию приложения "ESPHome-Flasher"
-      <a href="https://github.com/esphome/esphome-flasher/releases"
-      style="color:#6BB5FF;" title="ESPHome-Flasher">(ссылка)</a>, запускаем ее.
-      <br>Подключаем плату Esp32 к компьютеру с помощью MicroUsb кабеля.
+    <p class="code" style="width:185px; height:18px;">
+      HyperSPI_Pico_ws2812.uf2
     </p>
 
     <p>
-      В окне программы достаточно выполнить три действия:
-      <br>&emsp;- выбрать порт к которому подключена наша плата,
-      <br>&emsp;- указать путь до загруженного драйвера (файл *.bin),
-      <br>&emsp;- нажать кнопку "Flash ESP".
+      Подключаем плату Rp2040 к компьютеру с помощью Type-C кабеля.
+      <br>Далее необходимо перевести плату Pico в режим DFU, для этого нажмите и удерживайте кнопки "boot" и "reset", затем
+      отпустите кнопку "reset" затем отпустите кнопку "boot". В системном файловом менеджере вы должны найти новый диск с
+      наименованием "RPI-RP2"
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esphome_1.jpg" class="minimized" alt="esphome_1">
+      <img src="../files/img/pages/rp2040_firmware.jpg" class="minimized" alt="rp2040_firmware">
     </p>
 
     <p>
-      При успешном завершении процесса прошивки вы увидите следующее сообщение:
-    </p>
-
-    <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esphome_2.jpg" class="minimized" alt="esphome_2">
+      Перетащите (или скопируйте) скачанную ранее прошивку на этот диск.
+      <br>Pico автоматически сбросится после загрузки и через несколько секунд он будет готов к использованию с HyperHDR.
     </p>
 
     <p>

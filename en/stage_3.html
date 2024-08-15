@@ -38,44 +38,30 @@
     <p>
       Open the HyperSPI developer repository, we need a page of release versions
       <a href="https://github.com/awawa-dev/HyperSPI/releases" style="color:#6BB5FF;" title="HyperSPI">(link)</a>.
-      <br>Download the latest driver depending on the board used (ESP32 / Esp8266) and the type of LED strip.
-      Please note for the <b>Raspberry Pi Pico RP2040</b> board, there will be a slightly different driver installation
-      process without need to download additional programs, the process is described on this page
-      <a href="https://github.com/awawa-dev/HyperSerialPico" style="color:#6BB5FF;" title="HyperSerialPico">(link)</a>.
+      <br>Download the latest driver depending on the board used (Rp2040  / ESP32 / Esp8266) and the type of LED strip.
     </p>
 
     <p>
-      In my case, I am using an Esp32 board and a WS2812B tape, so I need to use the driver:
+      In my case, I am using an Rp2040 board and a WS2812B tape, so I need to use the driver:
     </p>
 
-    <p class="code" style="width:230px; height:18px;">
-      hyperspi_esp32_WS281x_RGB.bin
-    </p>
-
-    <p>
-      Download the latest available version of the application "ESPHome-Flasher"
-      <a href="https://github.com/esphome/esphome-flasher/releases"
-      style="color:#6BB5FF;" title="ESPHome-Flasher">(link)</a>, launch it.
-      <br>We connect the Esp32 board to the computer using a MicroUsb cable.
+    <p class="code" style="width:185px; height:18px;">
+      HyperSPI_Pico_ws2812.uf2
     </p>
 
     <p>
-      In the program window, it is enough to perform three actions:
-      <br>&emsp;- select the port to which our board is connected,
-      <br>&emsp;- specify the path to the loaded driver (*.bin file),
-      <br>&emsp;- press the button "Flash ESP".
+      We connect the Rp2040 board to the computer using a Type-C cable.
+      <br>Next, you need to put the Pico board into DFU mode, to do this, press and hold the "boot" and "reset" buttons, then release the
+      "reset" button then release the "boot" button. In the system file manager you should find a new disk with name "RPI-RP2"
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esphome_1.jpg" class="minimized" alt="esphome_1">
+      <img src="../files/img/pages/rp2040_firmware.jpg" class="minimized" alt="rp2040_firmware">
     </p>
 
     <p>
-      Upon successful completion of the flashing process, you will see the following message:
-    </p>
-
-    <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esphome_2.jpg" class="minimized" alt="esphome_2">
+      Drag (or copy) the previously downloaded firmware to this disk.
+      <br>Pico will automatically reset after booting and within seconds it will be ready for use with HyperHDR.
     </p>
 
     <p>
