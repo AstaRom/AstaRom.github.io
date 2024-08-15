@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambilight · Светодиодный драйвер</title>
+    <meta name="description" content="DIY-проект — покупка комплектующих, этап #2">
+    <!--Pages-->
+    <link rel="alternate" hreflang="ru" href="https://astarom.github.io/ru/buying_2.html">
+    <link rel="alternate" hreflang="en" href="https://astarom.github.io/en/buying_2.html">
+    <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/buying_2.html">
+    <!--Keywords-->
+    <meta name="keywords" content="ESP32, Esp8266, Raspberry Pi Pico RP2040, HyperSerialEsp8266, HyperSerialESP32, HyperSerialPico,\
+                                   ESP32 MH-ET Live, CH9102X, WLED, Wled, WS2812B, ws2812b, led driver, leds, Level shifter,\
+                                   Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
+                                   Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
+    <!--Not mobile version-->
+    <meta name="HandheldFriendly" content="false">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--Import-->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <!--Plugins-->
+    <script src="../files/js/jquery.min.js"></script>
+    <script src="../files/js/zoom-image.js"></script>
+  </head>
+  <body>
+    <p style="text-align:center">
+      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+    </p>
+
+    <h1>Светодиодный драйвер</h1>
+    <p>
+      В качестве светодиодного драйвера могут быть использованы как несколько вариантов плат, так и несколько вариантов
+      их подключения. На данный момент автором HyperHDR реализован высокоскоростной драйвер последовательного
+      порта Adalight для плат ESP32 / Esp8266 / Raspberry Pi Pico RP2040. Также реализованы несколько способов
+      подключения: Wled (Wi-Fi), порт Usb и мост SPI. Со всеми способами вы можете ознакомиться в репозитории автора
+      <a href="https://github.com/awawa-dev" style="color:#6BB5FF;" title="Awawa">(ссылка)</a>.
+      Для каждого драйвера описан процесс установки ПО и рекомендуемые автором платы для покупки
+      (остерегайтесь подделок и смотрите на отзывы о товаре на странице магазина).
+    </p>
+
+    <p class="code" style="width:645px; height:150px;">
+      <em><b>HyperSerialWLED</b></em> - беспроводное соединение, есть небольшая задержка.
+      <br><br><em><b>HyperSerialEsp8266 / HyperSerialESP32 / HyperSerialPico</b></em> - проводное USB-соединение.
+      <br>Меньшая задержка по сравнению с WLED.
+      <br>Рекомендуется использовать, когда от Raspberry Pi до микроконтроллера большое расстояние.
+      <br><br><em><b>HyperSPI</b></em> - подключение с помощью перемычек Dupont. Наименьшая задержка.
+      <br>Рекомендуется, если расстояние от Raspberry Pi до микроконтроллера составляет 15-20 см.
+    </p>
+
+    <p>
+      Мой выбор это подключение по мосту SPI, плата была приобретена "ESP32 MH-ET Live" с микросхемой "CH9102X"
+      <a href="https://aliexpress.ru/item/4000880936043.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/esp32_1.jpg" class="minimized" alt="esp32_1">
+    </p>
+
+    <h1>Переключатель уровня</h1>
+    <p>
+      Переключатель уровня 3,3 В является обязательной частью решения, в котором устройство GPIO 3,3 В, такое как
+      Raspberry Pi или ESP32 / Esp8266 / Raspberry Pi Pico RP2040, взаимодействует со светодиодной лентой 5 В. Переключатель
+      выполнен на основе микросхемы SN74AHCT125N <a href="https://aliexpress.ru/item/1005007427443923.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>
+    </p>
+
+    <h1>Макетная печатная плата</h1>
+    <p>
+      Макетные печатные платы относятся к универсальными и незаменимыми элементами с целью быстрой сборки схем без необходимости
+      изготовления собственной печатной платы (что усложняет сам проект). Для дальнейшей сборки полойдет макетная плата с размерами 3x7 см
+      <a href="https://aliexpress.ru/item/1005002371691231.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
+      Я решил пойти не совсем нестандартным путем, вы можете этого не делать. Мной была куплена более крупная плата и укорочена со всех
+      сторон до необходимого мне размера (с обработкой торцов).
+    </p>
+    <p>
+      Кроме самой макетной платы нам необходимы дополнительные элементы:
+      <br>&emsp;- гнездо IDC (тип "Мама") <a href="https://aliexpress.ru/item/32849903666.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- гнездо на плату прямое (10 pin, тип "Мама") <a href="https://aliexpress.ru/item/4001198421663.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- вилка штыревая 2.54мм (тип "Папа") <a href="https://aliexpress.ru/item/32758380907.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- перемычка Dupont (тип "Мама-Мама") <a href="https://aliexpress.ru/item/32909050779.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
+    </p>
+
+    <h1>Оглавление</h1>
+    <ul>
+      <li>Покупка комплектующих:</li>
+      <ol>
+        <li><a href="./buying_1.html">Устройство для хостинга HyperHDR</a></li>
+        <li><a href="#" style="color:#6BB5FF">Светодиодный драйвер</a></li>
+        <li><a href="./buying_3.html">HDMI сплиттер</a></li>
+        <li><a href="./buying_4.html">Usb карта захвата</a></li>
+      </ol>
+      <li><a href="./stage_1.html">Подготовка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
+      <li><a href="./stage_3.html">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_4.html">Установка светодиодной ленты на ТВ</a></li>
+      <li><a href="./stage_5.html">Общая сборка компонентов</a></li>
+    </ul>
+
+    <footer>
+      <p style="text-align:center">
+        <a href="#"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="../en/buying_2.html"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambilight · Installing Raspberry Pi OS with HyperHDR</title>
+    <meta name="description" content="DIY-project — assembly and configuration, stage #2">
+    <!--Pages-->
+    <link rel="alternate" hreflang="en" href="https://astarom.github.io/en/stage_2.html">
+    <link rel="alternate" hreflang="ru" href="https://astarom.github.io/ru/stage_2.html">
+    <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/stage_2.html">
+    <!--Keywords-->
+    <meta name="keywords" content="Raspberry Pi OS, Raspberry, Raspberry Pi, rpi,\
+                                   Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
+                                   Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
+    <!--Not mobile version-->
+    <meta name="HandheldFriendly" content="false">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--Import-->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <!--Plugins-->
+    <script src="../files/js/jquery.min.js"></script>
+    <script src="../files/js/zoom-image.js"></script>
+  </head>
+  <body>
+    <p style="text-align:center">
+      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index_en.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+    </p>
+
+    <h1>Installing Raspberry Pi OS with HyperHDR</h1>
+    <p>
+      Open the HyperHDR developer repository, we need a page with release versions
+      <a href="https://github.com/awawa-dev/HyperHDR/releases" style="color:#6BB5FF;" title="HyperHDR">(link)</a>.
+      <br>Download the topical image file depending on your hardware.
+      <br>Detailed installation instructions are in the "Wiki" section in the same repository
+      <a href="https://github.com/awawa-dev/HyperHDR/wiki/Installation" style="color:#6BB5FF;" title="HyperHDR">(link)</a>.
+      <br>There indicates for which device which image you need to download.
+    </p>
+
+    <p>
+      I have a Raspberry Pi 4 as hosting, so I need to use the image:
+    </p>
+
+    <p class="code" style="width:248px; height:18px;">
+      SD-card-image-64bits-aarch64.img.xz
+    </p>
+
+    <p>
+      We extract the *.img file from the downloaded archive with *.xc extension
+      <br>We connect a memory card of the "MicroSD" format to the computer (it is possible to use a regular memory card for Raspberry Pi 4).
+      <br>Downloading the Rufus program <a href="https://github.com/pbatard/rufus/releases" style="color:#6BB5FF;"
+      title="HyperHDR">(link)</a> and run it.
+    </p>
+
+    <p>
+      In the program window, it is enough to perform three actions:
+      <br>&emsp;- select drive,
+      <br>&emsp;- specify the path to the downloaded image (*.img file),
+      <br>&emsp;- press the "Start" button.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/hyperhdr_1_en.jpg" class="minimized" alt="hyperhdr_1_en">
+    </p>
+
+    <p>
+      We are waiting for the end of the process. After completion, open our memory card in Explorer, go to the <b>"boot"</b> folder.
+      Next, to configure a Wi-Fi connection you need to create a file with the name <b>"wpa_supplicant.conf"</b> in the previously
+      specified folder with the following content:
+    </p>
+
+    <p class="code" style="width:285px; height:150px;">
+      ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+      <br>update_config = 1
+      <br>country = US
+      <br>network = {
+      <br>&emsp;&ensp;ssid = "<b>Name of your Wi-Fi LAN</b>"
+      <br>&emsp;&ensp;psk = "<b>Password for your Wi-Fi LAN</b>"
+      <br>}
+    </p>
+
+    <p>
+      Edit it with the name and password of your home Wi-Fi network. Disconnect the memory card and connect it to the Raspberry Pi.
+      Open the Web interface for setting up your router and find the IP address assigned to the newly added RPi.
+      We connect to the HyperHDR settings panel, for this in the browser of any of your devices (phone / tablet / computer)
+      enter the IP address in the address bar and after the colon enter port 8090 (HTTP) or 8092 (HTTPS). Example:
+    </p>
+
+    <p class="code" style="width:128px; height:18px;">
+      192.168.0.38:8090
+    </p>
+
+    <p>
+      If we observe the settings window, then we did everything right.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/hyperhdr_2_en.jpg" class="minimized" alt="hyperhdr_2_en">
+    </p>
+
+    <h1>Content</h1>
+    <ul>
+      <li>Buying of components:</li>
+      <ol>
+        <li><a href="./buying_1.html">Device for hosting HyperHDR</a></li>
+        <li><a href="./buying_2.html">LED driver</a></li>
+        <li><a href="./buying_3.html">HDMI splitter</a></li>
+        <li><a href="./buying_4.html">USB capture card</a></li>
+      </ol>
+      <li><a href="./stage_1.html">Preparing the LED driver board</a></li>
+      <li><a href="#" style="color:#6BB5FF">Installing Raspberry Pi OS with HyperHDR</a></li>
+      <li><a href="./stage_3.html">Firmware LED driver board</a></li>
+      <li><a href="./stage_4.html">Installing an LED strip on a TV</a></li>
+      <li><a href="./stage_5.html">General assembly of components</a></li>
+    </ul>
+
+    <footer>
+      <p style="text-align:center">
+        <a href="../ru/stage_2.html"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="#"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+      </p>
+    </footer>
+  </body>
+</html>

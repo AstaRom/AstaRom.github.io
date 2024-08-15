@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ambilight · LED driver</title>
+    <meta name="description" content="DIY-project — purchase of components, stage #2">
+    <!--Pages-->
+    <link rel="alternate" hreflang="en" href="https://astarom.github.io/en/buying_2.html">
+    <link rel="alternate" hreflang="ru" href="https://astarom.github.io/ru/buying_2.html">
+    <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/buying_2.html">
+    <!--Keywords-->
+    <meta name="keywords" content="ESP32, Esp8266, Raspberry Pi Pico RP2040, HyperSerialEsp8266, HyperSerialESP32, HyperSerialPico,\
+                                   ESP32 MH-ET Live, CH9102X, WLED, Wled, WS2812B, ws2812b, led driver, leds, Level shifter,\
+                                   Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
+                                   Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
+    <!--Not mobile version-->
+    <meta name="HandheldFriendly" content="false">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--Import-->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <!--Plugins-->
+    <script src="../files/js/jquery.min.js"></script>
+    <script src="../files/js/zoom-image.js"></script>
+  </head>
+  <body>
+    <p style="text-align:center">
+      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index_en.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+    </p>
+
+    <h1>LED driver</h1>
+    <p>
+      As an LED driver, both several board options and several options can be used their connections. At the moment,
+      the author of HyperHDR has implemented a high-speed serial driver Adalight port for boards ESP32 / Esp8266 / Raspberry Pi
+      Pico RP2040. There are also several ways connections: Wled (Wi-Fi), Usb port and SPI bridge. You can find all
+      the methods in the author's repository <a href="https://github.com/awawa-dev" style="color:#6BB5FF;" title="Awawa">(link)</a>.
+      For each driver, the software installation process and boards recommended by the author are described for purchase
+      (beware of fakes and look at product reviews on the store page).
+    </p>
+
+    <p class="code" style="width:638px; height:150px;">
+      <em><b>HyperSerialWLED</b></em> - wireless connection, there is a slight delay.
+      <br><br><em><b>HyperSerialEsp8266 / HyperSerialESP32 / HyperSerialPico</b></em> - Usb wire connection.
+      <br>Lower latency compared to WLED.
+      <br>It is recommended to use when there is a long distance from the Raspberry Pi to the microcontroller.
+      <br><br><em><b>HyperSPI</b></em> - connection using Dupont jumpers. Least delay.
+      <br>Recommended if the distance from the Raspberry Pi to the microcontroller is 15-20 cm.
+    </p>
+
+    <p>
+      My choice is connection via SPI bridge, the board was purchased by "ESP32 MH-ET Live" with "CH9102X" chip
+      <a href="https://www.aliexpress.com/item/4000880936043.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/esp32_1.jpg" class="minimized" alt="esp32_1">
+    </p>
+
+    <h1>Level shifter</h1>
+    <p>
+      The 3.3V level switch is a mandatory part of the solution where a 3.3V GPIO device such as Raspberry Pi or
+      ESP32 / Esp8266 / Raspberry Pi Pico RP2040, interacts with 5V LED strip. The shifter is made on the basis of a chip
+      SN74AHCT125N <a href="https://www.aliexpress.com/item/1005007427443923.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>
+    </p>
+
+    <h1>Breadboard PCB</h1>
+    <p>
+      Breadboard printed circuit boards are universal and irreplaceable elements for the purpose of quick assembly of circuits
+      without the need making your own printed circuit board (which complicates the project itself). For further assembly,
+      a breadboard with dimensions of 3x7 cm will fit <a href="https://www.aliexpress.com/item/1005002371691231.html" style="color:#6BB5FF;"
+      title="Aliexpress">(link)</a>. I decided to go not quite standard way, your don't have to do this. I bought a larger board and
+      shortened from all sides to the size I need (with the processing of the ends).
+    </p>
+
+    <p>
+      In addition to the breadboard itself, we need additional elements:
+      <br>&emsp;- IDC socket (type "Female ") <a href="https://www.aliexpress.com/item/32849903666.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- board socket straight (10 pin, type "Female") <a href="www.aliexpress.com/item/4001198421663.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- pin plug 2.54mm (type "Male") <a href="www.aliexpress.com/item/32758380907.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- jumper-wire Dupont (type "Female-Female") <a href="www.aliexpress.com/item/32909050779.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
+    </p>
+
+    <h1>Content</h1>
+    <ul>
+      <li>Buying of components:</li>
+      <ol>
+        <li><a href="./buying_1.html">Device for hosting HyperHDR</a></li>
+        <li><a href="#" style="color:#6BB5FF">LED driver</a></li>
+        <li><a href="./buying_3.html">HDMI splitter</a></li>
+        <li><a href="./buying_4.html">USB capture card</a></li>
+      </ol>
+      <li><a href="./stage_1.html">Preparing the LED driver board</a></li>
+      <li><a href="./stage_2.html">Installing Raspberry Pi OS with HyperHDR</a></li>
+      <li><a href="./stage_3.html">Firmware LED driver board</a></li>
+      <li><a href="./stage_4.html">Installing an LED strip on a TV</a></li>
+      <li><a href="./stage_5.html">General assembly of components</a></li>
+    </ul>
+
+    <footer>
+      <p style="text-align:center">
+        <a href="../ru/buying_2.html"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="#"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+      </p>
+    </footer>
+  </body>
+</html>

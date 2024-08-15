@@ -1,0 +1,5 @@
+User-Agent: *
+
+Disallow: /files/board/
+
+Sitemap: https://astarom.github.io/sitemap.xml
