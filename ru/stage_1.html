@@ -42,7 +42,7 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_2.jpg" class="minimized" alt="esp32_2">
+      <img src="../files/img/pages/rp2040_2.jpg" class="minimized" alt="rp2040_2">
     </p>
 
     <p>
@@ -58,7 +58,7 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_3.jpg" class="minimized" alt="esp32_3">
+      <img src="../files/img/pages/rp2040_3.jpg" class="minimized" alt="rp2040_3">
     </p>
 
     <p>
@@ -66,37 +66,33 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_4.jpg" class="minimized" alt="esp32_4">
-      &emsp;<img src="../files/img/pages/esp32_5.jpg" class="minimized" alt="esp32_5">
+      <img src="../files/img/pages/rp2040_4.jpg" class="minimized" alt="rp2040_4">
+      &emsp;<img src="../files/img/pages/rp2040_5.jpg" class="minimized" alt="rp2040_5">
     </p>
 
     <p>
-      Синяя колодка в верхней части платы предназначена для двух Data-линий подключаемых к светодиодной ленте
+      Синяя колодка в нижней части платы предназначена для двух Data-линий подключаемых к светодиодной ленте
       (в данном варианте сборки используется параллельный многосегментный режим) и подключения 5 В от блока питания для питания
-      переключателя уровня. Синяя колодка расположенная в левой части платы предназначена подключения к Raspberry Pi (SPI мост).
+      переключателя уровня и самой платы Rp2040-Zero. Синяя колодка расположенная в правой части платы предназначена для
+      подключения к Raspberry Pi (SPI мост).
     </p>
 
     <table class="table">
       <thead>
         <tr>
-          <th>Esp32</th>
+          <th>Rp2040</th>
           <th>-</th>
           <th>Raspberry</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>GND</td>
-          <td>GND</td>
-          <td>GND</td>
-        </tr>
-        <tr>
-          <td>GPIO 18</td>
+          <td>GPIO 2</td>
           <td>SCK</td>
           <td>GPIO 11</td>
         </tr>
         <tr>
-          <td>GPIO 23</td>
+          <td>GPIO 4</td>
           <td>MOSI</td>
           <td>GPIO 10</td>
         </tr>
@@ -104,6 +100,11 @@
           <td>GPIO 5</td>
           <td>CE0</td>
           <td>GPIO 8</td>
+        </tr>
+        <tr>
+          <td>GND</td>
+          <td>GND</td>
+          <td>GND</td>
         </tr>
       </tbody>
     </table>
@@ -123,7 +124,7 @@
       </ol>
       <li><a href="#" style="color:#6BB5FF">Подготовка платы светодиодного драйвера</a></li>
       <li><a href="./stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
-      <li><a href="./stage_3.html">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_3.html">Прошивка вспомогательных устройств</a></li>
       <li><a href="./stage_4.html">Установка светодиодной ленты на ТВ</a></li>
       <li><a href="./stage_5.html">Общая сборка компонентов</a></li>
     </ul>

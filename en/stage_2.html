@@ -70,26 +70,37 @@
     </p>
 
     <p>
-      We are waiting for the end of the process. After completion, open our memory card in Explorer, go to the <b>"boot"</b> folder.
-      Next, to configure a Wi-Fi connection you need to create a file with the name <b>"wpa_supplicant.conf"</b> in the previously
-      specified folder with the following content:
+      We are waiting for the process of writing the system image to the drive to finish.
+      <br>After completion, open our memory card in Explorer, go to the folder <b>"boot"</b>.
+      <br>Next, to set up a Wi-Fi connection, you need to download files from the repository
+      <a href="https://github.com/AstaRom/AstaRom.github.io/tree/main/files/board/wi-fi/bookworm" style="color:#6BB5FF;" title="Wi-Fi">(link)</a>.
     </p>
 
-    <p class="code" style="width:285px; height:150px;">
-      ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-      <br>update_config = 1
-      <br>country = US
+    <p>
+      Place the downloaded files in the previously opened folder <b>"boot"</b>.
+      <br>Open the file <b>"firstrun.sh"</b> in any text editor, edit the following lines:
+    </p>
+
+    <p class="code" style="width:600px; height:150px;">
+      if [ -f /usr/lib/raspberrypi-sys-mods/imager_custom ]; then
+      <br>&emsp;&ensp;/usr/lib/raspberrypi-sys-mods/imager_custom set_wlan '<b>SSID-Wi-Fi</b>' '<b>Password-Wi-Fi</b>' 'RU'
+      <br>else
+      <br>
       <br>network = {
-      <br>&emsp;&ensp;ssid = "<b>Name of your Wi-Fi LAN</b>"
-      <br>&emsp;&ensp;psk = "<b>Password for your Wi-Fi LAN</b>"
+      <br>&emsp;&ensp;ssid = "<b>SSID-Wi-Fi</b>"
+      <br>&emsp;&ensp;psk = "<b>Password-Wi-Fi</b>"
       <br>}
     </p>
 
     <p>
-      Edit it with the name and password of your home Wi-Fi network. Disconnect the memory card and connect it to the Raspberry Pi.
-      Open the Web interface for setting up your router and find the IP address assigned to the newly added RPi.
-      We connect to the HyperHDR settings panel, for this in the browser of any of your devices (phone / tablet / computer)
-      enter the IP address in the address bar and after the colon enter port 8090 (HTTP) or 8092 (HTTPS). Example:
+      Edit it by specifying instead "<b>SSID-Wi-Fi</b>" and "<b>Password-Wi-Fi</b>" the name and password of your home Wi-Fi network.
+    </p>
+
+    <p>
+      Disconnect the memory card and connect it to the Raspberry Pi. Open the web interface for setting up your router and find the IP
+      address assigned to the newly added RPi. Connect to the HyperHDR settings panel, for this in the browser of any of your devices
+      (phone / tablet / computer) enter the IP address in the address bar field and after the colon
+      set port 8090 (HTTP). Example:
     </p>
 
     <p class="code" style="width:128px; height:18px;">
@@ -115,7 +126,7 @@
       </ol>
       <li><a href="./stage_1.html">Preparing the LED driver board</a></li>
       <li><a href="#" style="color:#6BB5FF">Installing Raspberry Pi OS with HyperHDR</a></li>
-      <li><a href="./stage_3.html">Firmware LED driver board</a></li>
+      <li><a href="./stage_3.html">Firmware for auxiliary devices</a></li>
       <li><a href="./stage_4.html">Installing an LED strip on a TV</a></li>
       <li><a href="./stage_5.html">General assembly of components</a></li>
     </ul>

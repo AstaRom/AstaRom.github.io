@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ambilight · Прошивка платы светодиодного драйвера</title>
+    <title>Ambilight · Прошивка вспомогательных устройств</title>
     <meta name="description" content="DIY-проект — сборка и настройка, этап #3">
     <!--Pages-->
     <link rel="alternate" hreflang="ru" href="https://astarom.github.io/ru/stage_3.html">
@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/stage_3.html">
     <!--Keywords-->
     <meta name="keywords" content="ESP32, Esp8266, Raspberry Pi Pico RP2040, WS2812B,\
-                                   ws2812b, ESP32 MH-ET Live, CH9102X, ESPHome-Flasher, ESPHome Flasher, ESPHome,\
+                                   USB capture card, USB, capture card, MS2130, MS2109,\
                                    Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
                                    Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
     <!--Not mobile version-->
@@ -38,48 +38,69 @@
     <p>
       Открываем репозиторий разработчика HyperSPI, нам нужна страница релизных версий
       <a href="https://github.com/awawa-dev/HyperSPI/releases" style="color:#6BB5FF;" title="HyperSPI">(ссылка)</a>.
-      <br>Скачиваем актуальный драйвер в зависимости от испоьзуемой платы (ESP32 / Esp8266) и типа светодиодной ленты.
-      Обратите внимание для платы <b>Raspberry Pi Pico RP2040</b> будет немного другой процесс установки драйвера без
-      неоходимости загрузки дополнительных программ, процесс описан на данной странице
-      <a href="https://github.com/awawa-dev/HyperSerialPico" style="color:#6BB5FF;" title="HyperSerialPico">(ссылка)</a>.
+      <br>Скачиваем актуальный драйвер в зависимости от испоьзуемой платы (Rp2040 / ESP32 / Esp8266) и типа светодиодной ленты.
     </p>
 
     <p>
-      В моем случае я использую плату Esp32 и ленту WS2812B, соответственно мне необходимо использовать  драйвер:
+      В моем случае я использую плату Rp2040 и ленту WS2812B, соответственно мне необходимо использовать  драйвер:
     </p>
 
-    <p class="code" style="width:230px; height:18px;">
-      hyperspi_esp32_WS281x_RGB.bin
-    </p>
-
-    <p>
-      Скачиваем самую последнюю доступную версию приложения "ESPHome-Flasher"
-      <a href="https://github.com/esphome/esphome-flasher/releases"
-      style="color:#6BB5FF;" title="ESPHome-Flasher">(ссылка)</a>, запускаем ее.
-      <br>Подключаем плату Esp32 к компьютеру с помощью MicroUsb кабеля.
+    <p class="code" style="width:185px; height:18px;">
+      HyperSPI_Pico_ws2812.uf2
     </p>
 
     <p>
-      В окне программы достаточно выполнить три действия:
-      <br>&emsp;- выбрать порт к которому подключена наша плата,
-      <br>&emsp;- указать путь до загруженного драйвера (файл *.bin),
-      <br>&emsp;- нажать кнопку "Flash ESP".
+      Подключаем плату Rp2040 к компьютеру с помощью Type-C кабеля.
+      <br>Далее необходимо перевести плату Pico в режим DFU, для этого нажмите и удерживайте кнопки "boot" и "reset", затем
+      отпустите кнопку "reset" затем отпустите кнопку "boot". В системном файловом менеджере вы должны найти новый диск с
+      наименованием "RPI-RP2"
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esphome_1.jpg" class="minimized" alt="esphome_1">
+      <img src="../files/img/pages/rp2040_firmware.jpg" class="minimized" alt="rp2040_firmware">
     </p>
 
     <p>
-      При успешном завершении процесса прошивки вы увидите следующее сообщение:
+      Перетащите (или скопируйте) скачанную ранее прошивку на этот диск.
+      <br>Pico автоматически сбросится после загрузки и через несколько секунд он будет готов к использованию с HyperHDR.
+    </p>
+
+    <h1>Прошивка Usb карты захвата</h1>
+    <p>
+      Из данного поста автора HyperHDR скачиваем актуальную версию модифицированной прошивки
+      <a href="https://github.com/awawa-dev/HyperHDR/discussions/729#discussioncomment-8126044"
+      style="color:#6BB5FF;" title="HyperSPI">(ссылка)</a>.
+      <br>В данном сообщении указаны ссылки на загрузку утилиты для прошивки нашего устройства, скачиваем ее
+      <a href="https://github.com/awawa-dev/HyperHDR/discussions/729#discussioncomment-8126044"
+      style="color:#6BB5FF;" title="HyperSPI">(ссылка)</a>.
+    </p>
+
+    <p>
+      Открываем скачанную программу, подключаем карту захвата в компьютер.
+      <br>В окне после подключения устрйства вы должны увидеть зеленый квадрат (ранее был красным до подключения).
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esphome_2.jpg" class="minimized" alt="esphome_2">
+      <img src="../files/img/pages/сapture_сard_4.jpg" class="minimized" alt="сapture_сard_4">
     </p>
 
     <p>
-      На этом данный этап прошивки платы светодиодного драйвера закончен.
+      Нажимаем на кнопку "Read", далее "Save to BIN".
+      <br>Сохраняем считанный файл с расширением *bin, на данном этапе мы сохранили резервную копию оригинальной прошивки.
+    </p>
+
+    <p>
+      Теперь звгрузим модифицированную прошивку, распакуем из *zip архива файл с расширением *bin.
+      <br>В окне программы нажимаем кнопку "Open File", указываем путь до нашего файла, нажимаем "Download".
+      <br>Ждем окончания процесса, в леом нижнем углу по окончании загрузки увидим сообщение об успешной прошивке.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../files/img/pages/сapture_сard_5.jpg" class="minimized" alt="сapture_сard_5">
+    </p>
+
+    <p>
+      На этом данный этап подготовки устройств к дальнейшей сборке закончен.
     </p>
 
     <h1>Оглавление</h1>
@@ -93,7 +114,7 @@
       </ol>
       <li><a href="./stage_1.html">Подготовка платы светодиодного драйвера</a></li>
       <li><a href="./stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
-      <li><a href="#" style="color:#6BB5FF">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="#" style="color:#6BB5FF">Прошивка вспомогательных устройств</a></li>
       <li><a href="./stage_4.html">Установка светодиодной ленты на ТВ</a></li>
       <li><a href="./stage_5.html">Общая сборка компонентов</a></li>
     </ul>
