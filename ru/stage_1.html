@@ -18,31 +18,30 @@
     <meta name="HandheldFriendly" content="false">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!--Import-->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
-    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../resources/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../resources/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/zoom-image.css">
     <!--Plugins-->
-    <script src="../files/js/jquery.min.js"></script>
-    <script src="../files/js/zoom-image.js"></script>
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/zoom-image.js"></script>
   </head>
   <body>
     <p style="text-align:center">
-      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
-      <br><a href="../index.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+      <img src="../resources/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index.html" title="Home"><img src="../resources/img/home.png" width="40" height="40" alt="home"></a>
     </p>
 
     <h1>Сборка платы</h1>
     <p>
       В программном обеспечении "Fritzing" составил схему соединений элементов на плате.
       <br>Исходный файл данной схемы вы можете загрузить из моего репозитория на GitHub
-      <a href="https://github.com/AstaRom/AstaRom.github.io/tree/main/files/board"
-      style="color:#6BB5FF;" title="GitHub">(ссылка)</a>.
+      <a href="https://github.com/AstaRom/AstaRom.github.io/tree/main/other" style="color:#6BB5FF;" title="GitHub">(ссылка)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_2.jpg" class="minimized" alt="esp32_2">
+      <img src="../resources/img/pages/rp2040_2.jpg" class="minimized" alt="rp2040_2">
     </p>
 
     <p>
@@ -58,7 +57,7 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_3.jpg" class="minimized" alt="esp32_3">
+      <img src="../resources/img/pages/rp2040_3.jpg" class="minimized" alt="rp2040_3">
     </p>
 
     <p>
@@ -66,37 +65,33 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_4.jpg" class="minimized" alt="esp32_4">
-      &emsp;<img src="../files/img/pages/esp32_5.jpg" class="minimized" alt="esp32_5">
+      <img src="../resources/img/pages/rp2040_4.jpg" class="minimized" alt="rp2040_4">
+      &emsp;<img src="../resources/img/pages/rp2040_5.jpg" class="minimized" alt="rp2040_5">
     </p>
 
     <p>
-      Синяя колодка в верхней части платы предназначена для двух Data-линий подключаемых к светодиодной ленте
+      Синяя колодка в нижней части платы предназначена для двух Data-линий подключаемых к светодиодной ленте
       (в данном варианте сборки используется параллельный многосегментный режим) и подключения 5 В от блока питания для питания
-      переключателя уровня. Синяя колодка расположенная в левой части платы предназначена подключения к Raspberry Pi (SPI мост).
+      переключателя уровня и самой платы Rp2040-Zero. Синяя колодка расположенная в правой части платы предназначена для
+      подключения к Raspberry Pi (SPI мост).
     </p>
 
     <table class="table">
       <thead>
         <tr>
-          <th>Esp32</th>
+          <th>Rp2040</th>
           <th>-</th>
           <th>Raspberry</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>GND</td>
-          <td>GND</td>
-          <td>GND</td>
-        </tr>
-        <tr>
-          <td>GPIO 18</td>
+          <td>GPIO 2</td>
           <td>SCK</td>
           <td>GPIO 11</td>
         </tr>
         <tr>
-          <td>GPIO 23</td>
+          <td>GPIO 4</td>
           <td>MOSI</td>
           <td>GPIO 10</td>
         </tr>
@@ -104,6 +99,11 @@
           <td>GPIO 5</td>
           <td>CE0</td>
           <td>GPIO 8</td>
+        </tr>
+        <tr>
+          <td>GND</td>
+          <td>GND</td>
+          <td>GND</td>
         </tr>
       </tbody>
     </table>
@@ -123,16 +123,16 @@
       </ol>
       <li><a href="#" style="color:#6BB5FF">Подготовка платы светодиодного драйвера</a></li>
       <li><a href="./stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
-      <li><a href="./stage_3.html">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_3.html">Прошивка вспомогательных устройств</a></li>
       <li><a href="./stage_4.html">Установка светодиодной ленты на ТВ</a></li>
       <li><a href="./stage_5.html">Общая сборка компонентов</a></li>
     </ul>
 
     <footer>
       <p style="text-align:center">
-        <a href="#"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
-        <a href="../en/stage_1.html"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
-        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+        <a href="#"><img src="../resources/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="../en/stage_1.html"><img src="../resources/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2025
       </p>
     </footer>
   </body>
