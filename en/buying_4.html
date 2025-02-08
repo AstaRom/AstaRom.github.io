@@ -18,62 +18,63 @@
     <meta name="HandheldFriendly" content="false">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!--Import-->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
-    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../resources/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../resources/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/zoom-image.css">
     <!--Plugins-->
-    <script src="../files/js/jquery.min.js"></script>
-    <script src="../files/js/zoom-image.js"></script>
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/zoom-image.js"></script>
   </head>
   <body>
     <p style="text-align:center">
-      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
-      <br><a href="../index_en.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+      <img src="../resources/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index_en.html" title="Home"><img src="../resources/img/home.png" width="40" height="40" alt="home"></a>
     </p>
 
     <h1>USB capture card</h1>
     <p>
-      As in the case of an HDMI splitter, there are many types of USB capture cards, from the most budgetary ones based on
-      the MS2109 chip (about $5), and much more expensive. The HyperHDR author's blog has an article in which he describes his
-      experience use of different capture cards in different price categories
+      As in the case of HDMI splitters, there are a large number of USB capture cards, both from the most budget ones based on the
+      MS2109 chip (about $5) to much more expensive ones. The blog of the author of HyperHDR has an article in which he describes his
+      experience of using various capture cards in different price categories
       <a href="https://www.hyperhdr.eu/2022/04/usb-grabbers-hdr-to-sdr-quality-test.html"
       style="color:#6BB5FF;" title="HyperHDR.eu">(link)</a>.
     </p>
 
     <p>
-      For myself, I chose the following capture card model based on the new MS2130 chip
-      <a href="https://www.aliexpress.com/item/1005004883158574.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>
+      For myself, I chose a relatively new capture card model based on the MS2130
+      <a href="https://www.aliexpress.com/item/1005004990708725.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/сapture_сard_1.jpg" class="minimized" alt="сapture_сard_1">
+      <img src="../resources/img/pages/сapture_сard_1.jpg" class="minimized" alt="сapture_сard_1">
     </p>
 
     <p>
-      For the project, many users use a simpler MS2109 capture card, but in this case me need to was to have support for
-      the Usb 3.0 standard and full support for 1080/60Hz. The above cheaper capture card did not have this characteristics.
+      For this project, many users previously used a simpler capture card on the MS2109 chip, but in this case I needed to have support
+      for the USB 3.0 standard and full support for 1080/60Hz. The budget capture card specified above did not have these
+      characteristics.
     </p>
 
     <p>
       The capture card uses an HDMI socket ("Female" type) as an input. To connect this card to an HDMI splitter either must
       be used an HDMI cable or an HDMI adapter ("Male-to-Male" type). I was more comfortable with the second option for which
-      the appropriate adapter was purchased <a href="https://www.aliexpress.com/item/1005006134239716.html" style="color:#6BB5FF;"
-      title="Aliexpress">(link)</a>
+      the appropriate adapter was acquired <a href="https://www.aliexpress.com/item/1005006134239716.html" style="color:#6BB5FF;"
+      title="Aliexpress">(link)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/сapture_сard_2.jpg" class="minimized" alt="сapture_сard_2">
+      <img src="../resources/img/pages/сapture_сard_2.jpg" class="minimized" alt="сapture_сard_2">
     </p>
 
     <p>
       To connect the output from the capture card to the Raspberry Pi, I purchased a short Usb 3.0 extension cable
-      <a href="https://www.aliexpress.com/item/1005003653930426.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>
+      <a href="https://www.aliexpress.com/item/1005003653930426.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/сapture_сard_3.jpg" class="minimized" alt="сapture_сard_3">
+      <img src="../resources/img/pages/сapture_сard_3.jpg" class="minimized" alt="сapture_сard_3">
     </p>
 
     <h1>Content</h1>
@@ -87,16 +88,16 @@
       </ol>
       <li><a href="./stage_1.html">Preparing the LED driver board</a></li>
       <li><a href="./stage_2.html">Installing Raspberry Pi OS with HyperHDR</a></li>
-      <li><a href="./stage_3.html">Firmware LED driver board</a></li>
+      <li><a href="./stage_3.html">Firmware for auxiliary devices</a></li>
       <li><a href="./stage_4.html">Installing an LED strip on a TV</a></li>
       <li><a href="./stage_5.html">General assembly of components</a></li>
     </ul>
 
     <footer>
       <p style="text-align:center">
-        <a href="../ru/buying_4.html"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
-        <a href="#"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
-        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+        <a href="../ru/buying_4.html"><img src="../resources/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="#"><img src="../resources/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2025
       </p>
     </footer>
   </body>

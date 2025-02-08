@@ -16,20 +16,20 @@
     <!--Not mobile version-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!--Import-->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./files/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/./files/img/favicon.png" sizes="32x32">
-    <link rel="stylesheet" type="text/css" href="./files/css/main.css">
-    <link rel="stylesheet" type="text/css" href="./files/css/fonts.css">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./resources/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/./resources/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="./resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="./resources/css/fonts.css">
   </head>
   <body>
     <p style="text-align:center">
-      <img src="./files/img/logo.png" width="500" height="170" alt="logo">
+      <img src="./resources/img/logo.png" width="500" height="170" alt="logo">
     </p>
 
     <p style="color:#83FF83;text-align:center">
       This guide describes my experience of assembling an analog of the Ambilight backlight that is used on Phillips TVs.
       The device consists of an LED strip that is fixed around the entire perimeter of the TV from the
-      back of it. The tape is connected to a Raspberry Pi single-board computer via an Esp32 microcontroller with a HyperSPI driver.
+      back of it. The tape is connected to a Raspberry Pi single-board computer via an RP2040 microcontroller with a HyperSPI driver.
       Using the HyperHDR program, the video and audio stream of the input signal received from the USB capture card is analyzed.
       After analysis, the color parameters are transmitted to an LED strip that reproduces scattered light around the perimeter
       of the TV, so that the wall surface behind its body is dynamically illuminated, thereby complementing the image on the screen
@@ -53,13 +53,13 @@
       </ul>
       <li><a href="./en/stage_1.html">Preparing the LED driver board</a></li>
       <li><a href="./en/stage_2.html">Installing Raspberry Pi OS with HyperHDR</a></li>
-      <li><a href="./en/stage_3.html">Firmware LED driver board</a></li>
+      <li><a href="./en/stage_3.html">Firmware for auxiliary devices</a></li>
       <li><a href="./en/stage_4.html">Installing an LED strip on a TV</a></li>
       <li><a href="./en/stage_5.html">General assembly of components</a></li>
     </ul>
 
     <p style="text-align:center">
-      <img src="./files/img/pages/author.png" width="154" height="138" alt="author">
+      <img src="./resources/img/pages/author.png" width="154" height="138" alt="author">
     </p>
 
     <table class="table">
@@ -80,17 +80,13 @@
           <td>Fritzing</td>
           <td><a href="https://github.com/fritzing/fritzing-app/releases/tag/CD-548">Fritzing Team</a></td>
         </tr>
-        <tr>
-          <td>ESPHome-Flasher</td>
-          <td><a href="https://github.com/esphome/esphome-flasher">ESPHome Team</a></td>
-        </tr>
       </tbody>
     </table>
     <footer>
       <p style="text-align:center">
-        <a href="./index.html"><img src="./files/img/ru.png" width="45" height="35" alt="ru"></a>
-        <a href="#"><img src="./files/img/en.png" width="45" height="35" alt="en"></a>
-        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+        <a href="./index.html"><img src="./resources/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="#"><img src="./resources/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2025
       </p>
     </footer>
   </body>

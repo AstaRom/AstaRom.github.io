@@ -19,19 +19,19 @@
     <meta name="HandheldFriendly" content="false">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <!--Import-->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../files/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/../files/img/favicon.png" sizes="32x32">
-    <link rel="stylesheet" type="text/css" href="../files/css/main.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/fonts.css">
-    <link rel="stylesheet" type="text/css" href="../files/css/zoom-image.css">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="../resources/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/../resources/img/favicon.png" sizes="32x32">
+    <link rel="stylesheet" type="text/css" href="../resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../resources/css/zoom-image.css">
     <!--Plugins-->
-    <script src="../files/js/jquery.min.js"></script>
-    <script src="../files/js/zoom-image.js"></script>
+    <script src="../resources/js/jquery.min.js"></script>
+    <script src="../resources/js/zoom-image.js"></script>
   </head>
   <body>
     <p style="text-align:center">
-      <img src="../files/img/logo.png" width="500" height="170" alt="logo">
-      <br><a href="../index.html" title="Home"><img src="../files/img/home.png" width="40" height="40" alt="home"></a>
+      <img src="../resources/img/logo.png" width="500" height="170" alt="logo">
+      <br><a href="../index.html" title="Home"><img src="../resources/img/home.png" width="40" height="40" alt="home"></a>
     </p>
 
     <h1>Светодиодный драйвер</h1>
@@ -55,39 +55,39 @@
     </p>
 
     <p>
-      Мой выбор это подключение по мосту SPI, плата была приобретена "ESP32 MH-ET Live" с микросхемой "CH9102X"
-      <a href="https://aliexpress.ru/item/4000880936043.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>
+      Мой выбор это подключение по мосту SPI, плата была приобретена "RP2040-Zero"
+      <a href="https://aliexpress.ru/item/1005006181675768.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../files/img/pages/esp32_1.jpg" class="minimized" alt="esp32_1">
+      <img src="../resources/img/pages/rp2040_1.jpg" class="minimized" alt="rp2040_1">
     </p>
 
     <h1>Переключатель уровня</h1>
     <p>
-      Переключатель уровня 3,3 В является обязательной частью решения, в котором устройство GPIO 3,3 В, такое как
-      Raspberry Pi или ESP32 / Esp8266 / Raspberry Pi Pico RP2040, взаимодействует со светодиодной лентой 5 В. Переключатель
-      выполнен на основе микросхемы SN74AHCT125N <a href="https://aliexpress.ru/item/1005007427443923.html"
-      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>
+      Переключатель уровня (3,3->5V) является обязательной частью решения, в котором устройство GPIO, такое как Raspberry Pi
+      или ESP32 / Esp8266 / Raspberry Pi Pico RP2040, взаимодействует со светодиодной лентой. Переключатель выполнен на
+      основе микросхемы SN74AHCT125N <a href="https://aliexpress.ru/item/1005008431806878.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
     </p>
 
     <h1>Макетная печатная плата</h1>
     <p>
-      Макетные печатные платы относятся к универсальными и незаменимыми элементами с целью быстрой сборки схем без необходимости
-      изготовления собственной печатной платы (что усложняет сам проект). Для дальнейшей сборки полойдет макетная плата с размерами 3x7 см
-      <a href="https://aliexpress.ru/item/1005002371691231.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
-      Я решил пойти не совсем нестандартным путем, вы можете этого не делать. Мной была куплена более крупная плата и укорочена со всех
-      сторон до необходимого мне размера (с обработкой торцов).
+      Макетные печатные платы относятся к универсальными и незаменимыми элементами с целью быстрой сборки схем без
+      необходимости изготовления собственной печатной платы (что усложняет сам проект). Для дальнейшей сборки подойдет
+      макетная плата с размерами 3x7 см <a href="https://aliexpress.ru/item/1005008444647954.html" style="color:#6BB5FF;"
+      title="Aliexpress">(ссылка)</a>. Я решил подойти к сборке не совсем стандартным путем, приобрел более
+      крупную по размеру плату и укоротил ее со всех сторон до необходимого мне размера (с обработкой торцов).
     </p>
     <p>
       Кроме самой макетной платы нам необходимы дополнительные элементы:
-      <br>&emsp;- гнездо IDC (тип "Мама") <a href="https://aliexpress.ru/item/32849903666.html"
+      <br>&emsp;- круглый штыревой разъем 2.54мм (тип "Мама") <a href="https://aliexpress.ru/item/1005007465756012.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
-      <br>&emsp;- гнездо на плату прямое (10 pin, тип "Мама") <a href="https://aliexpress.ru/item/4001198421663.html"
+      <br>&emsp;- гнездо на плату прямое (9 pin, тип "Мама") <a href="https://aliexpress.ru/item/1005005769062477.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
-      <br>&emsp;- вилка штыревая 2.54мм (тип "Папа") <a href="https://aliexpress.ru/item/32758380907.html"
+      <br>&emsp;- вилка штыревая 2.54мм (тип "Папа") <a href="https://aliexpress.ru/item/32789447817.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
-      <br>&emsp;- перемычка Dupont (тип "Мама-Мама") <a href="https://aliexpress.ru/item/32909050779.html"
+      <br>&emsp;- перемычка Dupont (тип "Мама-Мама") <a href="https://aliexpress.ru/item/4000812552635.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
     </p>
 
@@ -102,16 +102,16 @@
       </ol>
       <li><a href="./stage_1.html">Подготовка платы светодиодного драйвера</a></li>
       <li><a href="./stage_2.html">Установка Raspberry Pi OS с HyperHDR</a></li>
-      <li><a href="./stage_3.html">Прошивка платы светодиодного драйвера</a></li>
+      <li><a href="./stage_3.html">Прошивка вспомогательных устройств</a></li>
       <li><a href="./stage_4.html">Установка светодиодной ленты на ТВ</a></li>
       <li><a href="./stage_5.html">Общая сборка компонентов</a></li>
     </ul>
 
     <footer>
       <p style="text-align:center">
-        <a href="#"><img src="../files/img/ru.png" width="45" height="35" alt="ru"></a>
-        <a href="../en/buying_2.html"><img src="../files/img/en.png" width="45" height="35" alt="en"></a>
-        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2024
+        <a href="#"><img src="../resources/img/ru.png" width="45" height="35" alt="ru"></a>
+        <a href="../en/buying_2.html"><img src="../resources/img/en.png" width="45" height="35" alt="en"></a>
+        <br>Copyright &copy; <a href="https://github.com/AstaRom">AstaRom</a>, 2022-2025
       </p>
     </footer>
   </body>
