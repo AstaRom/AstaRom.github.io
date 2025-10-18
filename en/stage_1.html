@@ -11,7 +11,7 @@
     <link rel="alternate" hreflang="ru" href="https://astarom.github.io/ru/stage_1.html">
     <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/stage_1.html">
     <!--Keywords-->
-    <meta name="keywords" content="Fritzing, ESP32, Level shifter, SPI, led driver, Raspberry, Raspberry Pi, rpi,\
+    <meta name="keywords" content="Fritzing, SN74LVC2T45, Level shifter, SPI, led driver, Raspberry, Raspberry Pi, rpi,\
                                    Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
                                    Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
     <!--Not mobile version-->
@@ -41,7 +41,7 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../resources/img/pages/rp2040_2.jpg" class="minimized" alt="rp2040_2">
+      <img src="../resources/img/pages/led_driver_1.jpg" class="minimized" alt="led_driver_1">
     </p>
 
     <p>
@@ -57,7 +57,16 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../resources/img/pages/rp2040_3.jpg" class="minimized" alt="rp2040_3">
+      <img src="../resources/img/pages/led_driver_2.jpg" class="minimized" alt="led_driver_2">
+    </p>
+
+    <p>
+      First, we need to solder the chip onto the adapter-board. The element is quite small, to work with it you need some
+      experience with a soldering iron and a correspondingly thin tip (I use a 'BC2' type tip).
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../resources/img/pages/led_driver_3.jpg" class="minimized" alt="led_driver_3">
     </p>
 
     <p>
@@ -65,14 +74,15 @@
     </p>
 
     <p class="framing" style="text-align:center">
-      <img src="../resources/img/pages/rp2040_4.jpg" class="minimized" alt="rp2040_4">
-      &emsp;<img src="../resources/img/pages/rp2040_5.jpg" class="minimized" alt="rp2040_5">
+      <img src="../resources/img/pages/led_driver_4.jpg" class="minimized" alt="led_driver_4">
+      &emsp;<img src="../resources/img/pages/led_driver_5.jpg" class="minimized" alt="led_driver_5">
     </p>
 
     <p>
-      The blue block at the bottom of the board is intended for two Data lines connected to the LED strip (this assembly option uses
-      parallel multi-segment mode) and connecting 5 V from the power supply for power level shifter and the Rp2040-Zero board itself.
-      The blue block located on the right side of the board is intended for connection to Raspberry Pi (SPI bridge).
+      The block on the left side of the board is intended for two Data lines connected to the LED strip (in this version
+      assembly uses parallel multi-segment mode) and +5v/Gnd connection from the power supply for power level switch and
+      the Rp2040-Zero board itself. The block located on the right side of the board is intended for connection to
+      Raspberry Pi (SPI bridge).
     </p>
 
     <table class="table">

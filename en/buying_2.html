@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/buying_2.html">
     <!--Keywords-->
     <meta name="keywords" content="ESP32, Esp8266, Raspberry Pi Pico RP2040, HyperSerialEsp8266, HyperSerialESP32, HyperSerialPico,\
-                                   ESP32 MH-ET Live, CH9102X, WLED, Wled, WS2812B, ws2812b, led driver, leds, Level shifter,\
+                                   SN74LVC2T45, WLED, Wled, WS2812B, ws2812b, led driver, leds, Level shifter,\
                                    Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
                                    Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
     <!--Not mobile version-->
@@ -54,8 +54,10 @@
     </p>
 
     <p>
-      My choice is connection via SPI bridge, the board was purchased by "RP2040-Zero"
-      <a href="https://www.aliexpress.com/item/1005006181675768.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
+      At the moment, the solution that is relevant in my case is connection via the SPI bridge, the "RP2040-Zero" controller
+      <a href="https://www.aliexpress.com/item/1005008559478344.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
+      <br>Archive of previous implementations of LED driver posted
+      <a href="https://github.com/AstaRom/AstaRom.github.io/discussions" style="color:#6BB5FF;" title="Led driver">(on this page)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
@@ -64,27 +66,54 @@
 
     <h1>Level shifter</h1>
     <p>
-      A level shifter (3.3->5V) is a mandatory part of the solution in which a GPIO device such as Raspberry Pi or ESP32 / Esp8266 /
-      Raspberry Pi Pico RP2040 interfaces with the LED strip. The switch is based on the SN74AHCT125N chip
-      <a href="https://www.aliexpress.com/item/1005008431806878.html" style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
+      Many 5v LED strips can operate without a level switch, especially if the cable between the controller and the LED strip
+      is very short. However, flickering may sometimes occur, for example, the LEDs briefly flash white. More serious failures
+      are also possible. When using 12 or 24v LED strips, a level switch is usually indispensable. However, for 5v LED strips,
+      especially in industrial applications, it is also strongly recommended to use a level switch to ensure smooth operation.
+      The level switch adapts the signal level of the microcontroller (3.3v) to the signal level of the LED strip (5v for all
+      types of addressable LEDs).
+    </p>
+    <p>
+      The switch is based on the 'SN74LVC2T45' chip <a href="https://www.aliexpress.com/item/1005009161588278.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../resources/img/pages/level_shifter_1.jpg" class="minimized" alt="level_shifter_1">
     </p>
 
     <h1>Breadboard PCB</h1>
     <p>
-      Breadboard printed circuit boards are universal and indispensable elements for the purpose of quickly assembling circuits without
-      the need to make your own printed circuit board (which complicates the project itself). For further assembly, a breadboard with
-      dimensions of 3x7 cm <a href="https://www.aliexpress.com/item/1005008444647954.html" style="color:#6BB5FF;"
-      title="Aliexpress">(link)</a> is suitable. I decided to approach the assembly in a non-standard way, bought a larger board and
-      shortened it on all sides to the size I needed (with end processing).
+      Breadboard printed circuit boards are universal and indispensable elements for the purpose of quickly assembling circuits
+      without the need to make your own printed circuit board (which complicates the project itself). For further assembly, a
+      breadboard with dimensions of 3x7 cm <a href="https://www.aliexpress.com/item/1005008463998977.html" style="color:#6BB5FF;"
+      title="Aliexpress">(link)</a> is suitable.
+    </p>
+    <p>
+      I decided to approach the assembly in a non-standard way, a board close in size and shortened it on all sides to the size
+      I need (with end processing). In this case, it was more convenient for me personally, since the finished board itself will
+      be as compact as possible.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../resources/img/pages/breadboard_1.jpg" class="minimized" alt="breadboard_1">
     </p>
 
     <p>
       In addition to the breadboard itself, we need additional elements:
       <br>&emsp;- round pin header 2.54mm (type "Female") <a href="https://www.aliexpress.com/item/1005007465756012.html"
       style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
-      <br>&emsp;- board socket straight (9 pin, type "Female") <a href="https://www.aliexpress.com/item/1005005769062477.html"
+      <br>&emsp;- board socket straight (9 pin, type "Female") <a href="https://www.aliexpress.com/item/1005006533889843.html"
       style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
-      <br>&emsp;- pin plug 2.54mm (type "Male") <a href="https://www.aliexpress.com/item/32789447817.html"
+      <br>&emsp;- pin plug 2.54mm (type "Male") <a href="https://www.aliexpress.com/item/1005005426197890.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- capacitor 100 nf <a href="https://www.aliexpress.com/item/1005006815376985.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- resistor 100 Ohm <a href="https://www.aliexpress.com/item/1005001794439592.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- adapter board: SOP8, SOIC8, SSOP8 -> DIP8 <a href="https://www.aliexpress.com/item/1005006991835764.html"
+      style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
+      <br>&emsp;- 4-pin connector RGBW / RGB <a href="https://www.aliexpress.com/item/33024247491.html"
       style="color:#6BB5FF;" title="Aliexpress">(link)</a>,
       <br>&emsp;- jumper-wire Dupont (type "Female-Female") <a href="https://www.aliexpress.com/item/4000812552635.html"
       style="color:#6BB5FF;" title="Aliexpress">(link)</a>.

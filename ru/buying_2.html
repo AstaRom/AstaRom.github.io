@@ -12,7 +12,7 @@
     <link rel="alternate" hreflang="x-default" href="https://astarom.github.io/ru/buying_2.html">
     <!--Keywords-->
     <meta name="keywords" content="ESP32, Esp8266, Raspberry Pi Pico RP2040, HyperSerialEsp8266, HyperSerialESP32, HyperSerialPico,\
-                                   ESP32 MH-ET Live, CH9102X, WLED, Wled, WS2812B, ws2812b, led driver, leds, Level shifter,\
+                                   SN74LVC2T45, WLED, Wled, WS2812B, ws2812b, led driver, leds, Level shifter,\
                                    Ambilight, Ambilight DIY, DIY Ambilight, Ambilight Raspberry Pi, HyperHDR, HyperSPI, Phillips Ambilight,\
                                    Phillips HUE, Adalight, Hyperion, Hyperion.NG, Awawa, awawa-dev, AstaRom, astarom">
     <!--Not mobile version-->
@@ -55,8 +55,10 @@
     </p>
 
     <p>
-      Мой выбор это подключение по мосту SPI, плата была приобретена "RP2040-Zero"
-      <a href="https://aliexpress.ru/item/1005006181675768.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
+      На данный момент актуальное в моем случае решение - подключение по мосту SPI, контроллер "RP2040-Zero"
+      <a href="https://aliexpress.ru/item/1005008559478344.html" style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
+      <br>Архив предыдущих реализаций светодиодного драйвера разместил
+      <a href="https://github.com/AstaRom/AstaRom.github.io/discussions" style="color:#6BB5FF;" title="Led driver">(на данной странице)</a>.
     </p>
 
     <p class="framing" style="text-align:center">
@@ -65,27 +67,55 @@
 
     <h1>Переключатель уровня</h1>
     <p>
-      Переключатель уровня (3,3->5V) является обязательной частью решения, в котором устройство GPIO, такое как Raspberry Pi
-      или ESP32 / Esp8266 / Raspberry Pi Pico RP2040, взаимодействует со светодиодной лентой. Переключатель выполнен на
-      основе микросхемы SN74AHCT125N <a href="https://aliexpress.ru/item/1005008431806878.html"
+      Многие светодиодные ленты с напряжением 5v могут работать и без переключателя уровней, особенно если провод между
+      контроллером и светодиодной лентой очень короткий. Однако иногда могут возникать мерцания, например, светодиоды
+      кратковременно вспыхивают белым светом. Возможны и более серьезные сбои. При использовании светодиодных лент с
+      напряжением 12 или 24v обычно не обойтись без переключателя уровней. Однако для светодиодных лент с напряжением 5v,
+      особенно в условиях производственной эксплуатации, также настоятельно рекомендуется использовать переключатель
+      уровней для обеспечения бесперебойной работы. Переключатель уровней адаптирует уровень сигнала микроконтроллера
+      (3,3v) к уровню сигнала светодиодной ленты (5v для всех типов адресуемых светодиодов).
+    </p>
+    <p>
+      Переключатель выполнен на основе микросхемы 'SN74LVC2T45' <a href="https://aliexpress.ru/item/1005009161588278.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../resources/img/pages/level_shifter_1.jpg" class="minimized" alt="level_shifter_1">
     </p>
 
     <h1>Макетная печатная плата</h1>
     <p>
       Макетные печатные платы относятся к универсальными и незаменимыми элементами с целью быстрой сборки схем без
       необходимости изготовления собственной печатной платы (что усложняет сам проект). Для дальнейшей сборки подойдет
-      макетная плата с размерами 3x7 см <a href="https://aliexpress.ru/item/1005008444647954.html" style="color:#6BB5FF;"
-      title="Aliexpress">(ссылка)</a>. Я решил подойти к сборке не совсем стандартным путем, приобрел более
-      крупную по размеру плату и укоротил ее со всех сторон до необходимого мне размера (с обработкой торцов).
+      макетная плата с размерами 3x7 см <a href="https://aliexpress.ru/item/1005008463998977.html" style="color:#6BB5FF;"
+      title="Aliexpress">(ссылка)</a>.
     </p>
+    <p>
+      Я решил подойти к сборке не совсем стандартным путем, близкую по размеру плату и укоротил со всех сторон до
+      необходимого мне размера (с обработкой торцов). В данном случае лично мне было так удобнее, так сама готовая плата
+      будет максимально компактной.
+    </p>
+
+    <p class="framing" style="text-align:center">
+      <img src="../resources/img/pages/breadboard_1.jpg" class="minimized" alt="breadboard_1">
+    </p>
+
     <p>
       Кроме самой макетной платы нам необходимы дополнительные элементы:
       <br>&emsp;- круглый штыревой разъем 2.54мм (тип "Мама") <a href="https://aliexpress.ru/item/1005007465756012.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
-      <br>&emsp;- гнездо на плату прямое (9 pin, тип "Мама") <a href="https://aliexpress.ru/item/1005005769062477.html"
+      <br>&emsp;- гнездо на плату прямое (9 pin, тип "Мама") <a href="https://aliexpress.ru/item/1005006533889843.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
-      <br>&emsp;- вилка штыревая 2.54мм (тип "Папа") <a href="https://aliexpress.ru/item/32789447817.html"
+      <br>&emsp;- вилка штыревая 2.54мм (тип "Папа") <a href="https://aliexpress.ru/item/1005005426197890.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- конденсатор 100 мкФ <a href="https://aliexpress.ru/item/1005006815376985.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- резистор 100 Ом <a href="https://aliexpress.ru/item/1005001794439592.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- плата адаптера: SOP8, SOIC8, SSOP8 -> DIP8 <a href="https://aliexpress.ru/item/1005006991835764.html"
+      style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
+      <br>&emsp;- 4-контактный коннектор RGBW / RGB <a href="https://aliexpress.ru/item/33024247491.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>,
       <br>&emsp;- перемычка Dupont (тип "Мама-Мама") <a href="https://aliexpress.ru/item/4000812552635.html"
       style="color:#6BB5FF;" title="Aliexpress">(ссылка)</a>.
